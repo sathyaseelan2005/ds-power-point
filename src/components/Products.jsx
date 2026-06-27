@@ -88,13 +88,13 @@ const Products = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-            <span className="text-primary-gold font-montserrat font-medium text-sm">Our Products</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+            <span className="text-gold font-montserrat font-medium text-sm">Our Products</span>
           </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-navy mb-4">
             Premium Power Solutions
           </h2>
-          <p className="font-montserrat text-paragraph text-base max-w-2xl mx-auto">
+          <p className="font-montserrat text-navy/80 text-base max-w-2xl mx-auto">
             Strong starts. Steady backups. Total power solutions. Explore our wide range of batteries and power solutions from leading brands.
           </p>
         </motion.div>
@@ -186,7 +186,7 @@ const Products = () => {
               <motion.div
                 key={num}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 flex flex-col group"
+                className="bg-navy-lighter1 rounded-xl overflow-hidden shadow-soft border border-gold flex flex-col group hover:shadow-soft-lg transition-all duration-300"
               >
                 <div className="aspect-square bg-gray-100 overflow-hidden cursor-pointer relative">
                   <img
@@ -196,14 +196,14 @@ const Products = () => {
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                <div className="p-4 bg-white mt-auto">
+                <div className="p-4 bg-navy-lighter1 mt-auto">
                   <motion.a
                     href="https://wa.me/918902388887"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center gap-2 w-full py-2.5 bg-primary-navy text-white rounded-xl font-montserrat font-medium text-sm hover:bg-secondary-dark transition-colors"
+                    className="flex items-center justify-center gap-2 w-full py-2.5 bg-gold text-white rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover hover:shadow-card-hover transition-all"
                   >
                     <MessageCircle size={16} />
                     Enquire Now

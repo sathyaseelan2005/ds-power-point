@@ -18,7 +18,7 @@ const Brands = () => {
   const marqueeBrands = [...brands, ...brands];
 
   return (
-    <section id="brands" className="py-20 lg:py-32 bg-background overflow-hidden">
+    <section id="brands" className="py-20 lg:py-32 bg-navy overflow-hidden border-y border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -28,13 +28,13 @@ const Brands = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-            <span className="text-primary-gold font-montserrat font-medium text-sm">Our Partners</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+            <span className="text-gold font-montserrat font-medium text-sm">Our Partners</span>
           </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             We Deal With
           </h2>
-          <p className="font-montserrat text-paragraph text-base max-w-2xl mx-auto">
+          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
             All leading brands available. We are proud to be authorized dealers and distributors for India's leading battery and power solution brands.
           </p>
         </motion.div>
@@ -42,13 +42,13 @@ const Brands = () => {
         {/* Marquee Container */}
         <div className="relative">
           {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-navy to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-navy to-transparent z-10" />
 
           {/* Marquee */}
           <div className="flex overflow-hidden">
             <motion.div
-              animate={{ x: [0, -50 * brands.length + '%'] }}
+              animate={{ x: ['0%', '-50%'] }}
               transition={{
                 x: {
                   repeat: Infinity,
@@ -63,25 +63,25 @@ const Brands = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="flex-shrink-0 w-64 bg-white rounded-2xl shadow-soft p-6 border border-gray-100 hover:shadow-soft-lg transition-all duration-300 group"
+                  className="flex-shrink-0 w-64 bg-white rounded-2xl shadow-card p-6 border border-gold hover:border-gold hover:shadow-card-hover transition-all duration-300 group"
                 >
                   {/* Brand Logo */}
-                  <div className="w-full h-24 bg-white rounded-xl flex items-center justify-center mb-4 p-2">
+                  <div className="w-full h-24 bg-transparent rounded-xl flex items-center justify-center mb-4 p-2">
                     <img
                       src={brand.img}
                       alt={`${brand.name} logo`}
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   
                   {/* Brand Name */}
-                  <h3 className="font-poppins font-semibold text-lg text-heading text-center mb-2">
+                  <h3 className="font-poppins font-semibold text-lg text-navy text-center mb-2">
                     {brand.name}
                   </h3>
                   
                   {/* Status Badge */}
                   <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-primary-gold/10 text-primary-gold rounded-full text-xs font-montserrat font-medium">
+                    <span className="inline-flex items-center px-3 py-1 bg-gold/10 text-gold rounded-full text-xs font-montserrat font-medium">
                       {brand.status}
                     </span>
                   </div>
@@ -100,17 +100,17 @@ const Brands = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-soft p-4 border border-gray-100 text-center"
+              className="bg-white rounded-xl shadow-card p-4 border border-gold text-center"
             >
-              <div className="w-full h-20 bg-white rounded-lg flex items-center justify-center mb-3 p-2">
+              <div className="w-full h-20 bg-transparent rounded-lg flex items-center justify-center mb-3 p-2">
                 <img
                   src={brand.img}
                   alt={`${brand.name} logo`}
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <h4 className="font-poppins font-medium text-sm text-heading mb-1">{brand.name}</h4>
-              <span className="text-xs text-primary-gold font-montserrat">{brand.status}</span>
+              <h4 className="font-poppins font-medium text-sm text-navy mb-1">{brand.name}</h4>
+              <span className="text-xs text-gold font-montserrat">{brand.status}</span>
             </motion.div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageSquare, Settings, Headphones, ArrowDown } from 'lucide-react';
+import { Phone, MessageSquare, Settings, Headphones, ArrowDown, ArrowRight } from 'lucide-react';
 
 const WorkingProcess = () => {
   const steps = [
@@ -31,7 +31,7 @@ const WorkingProcess = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-32 bg-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -41,13 +41,13 @@ const WorkingProcess = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-            <span className="text-primary-gold font-montserrat font-medium text-sm">How It Works</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+            <span className="text-gold font-montserrat font-medium text-sm">How It Works</span>
           </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             Our Working Process
           </h2>
-          <p className="font-montserrat text-paragraph text-base max-w-2xl mx-auto">
+          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
             Simple and hassle-free process to get your power solutions
           </p>
         </motion.div>
@@ -70,28 +70,35 @@ const WorkingProcess = () => {
                 {/* Mobile Arrow */}
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center my-4">
-                    <ArrowDown size={24} className="text-primary-gold" />
+                    <ArrowDown size={24} className="text-gold" />
                   </div>
                 )}
 
-                <div className="text-center">
+                {/* Desktop Arrow */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:flex absolute top-1/2 -right-8 w-8 -translate-y-1/2 justify-center z-10">
+                    <ArrowRight size={28} className="text-gold" />
+                  </div>
+                )}
+
+                <div className="bg-white rounded-2xl p-6 shadow-soft border border-gold text-center h-full">
                   {/* Number & Icon */}
                   <div className="relative inline-block mb-6">
                     <div className="w-20 h-20 bg-gradient-gold rounded-2xl flex items-center justify-center mx-auto shadow-glow">
                       <step.icon size={32} className="text-white" />
                     </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full shadow-soft flex items-center justify-center">
-                      <span className="font-poppins font-bold text-sm text-primary-gold">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white border border-gold rounded-full shadow-soft flex items-center justify-center">
+                      <span className="font-poppins font-bold text-sm text-gold">
                         {step.number}
                       </span>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-poppins font-bold text-xl text-heading mb-3">
+                  <h3 className="font-poppins font-bold text-xl text-navy mb-3">
                     {step.title}
                   </h3>
-                  <p className="font-montserrat text-paragraph text-sm leading-relaxed max-w-xs mx-auto">
+                  <p className="font-montserrat text-navy/80 text-sm leading-relaxed max-w-xs mx-auto">
                     {step.description}
                   </p>
                 </div>

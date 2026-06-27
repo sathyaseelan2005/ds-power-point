@@ -46,7 +46,7 @@ const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 lg:py-32 bg-background overflow-hidden">
+    <section className="py-20 lg:py-32 bg-navy overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         {/* Section Header */}
         <motion.div
@@ -56,13 +56,13 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-            <span className="text-primary-gold font-montserrat font-medium text-sm">Testimonials</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+            <span className="text-gold font-montserrat font-medium text-sm">Testimonials</span>
           </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
             What Our Customers Say
           </h2>
-          <p className="font-montserrat text-paragraph text-base max-w-2xl mx-auto">
+          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
             Trusted by thousands of satisfied customers across Erode
           </p>
         </motion.div>
@@ -74,37 +74,37 @@ const Testimonials = () => {
           {duplicatedTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-soft border border-gray-100 p-8 w-[320px] lg:w-[400px] flex-shrink-0 relative transition-all duration-300 hover:shadow-soft-lg"
+              className="bg-white rounded-2xl shadow-soft border border-gold p-8 w-[320px] lg:w-[400px] flex-shrink-0 relative transition-all duration-300 hover:shadow-soft-lg"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 w-10 h-10 bg-primary-gold/10 rounded-full flex items-center justify-center">
-                <Quote size={18} className="text-primary-gold" />
+              <div className="absolute top-6 right-6 w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center">
+                <Quote size={18} className="text-gold" />
               </div>
 
               {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={18} className="text-primary-gold fill-primary-gold" />
+                  <Star key={i} size={18} className="text-gold fill-gold" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="font-montserrat text-paragraph text-sm leading-relaxed mb-6">
+              <p className="font-montserrat text-navy/80 text-sm leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-gold to-accent-gold rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center">
                   <span className="font-poppins font-bold text-white text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <h4 className="font-poppins font-semibold text-heading text-sm">
+                  <h4 className="font-poppins font-semibold text-navy text-sm">
                     {testimonial.name}
                   </h4>
-                  <p className="font-montserrat text-paragraph text-xs">
+                  <p className="font-montserrat text-navy/60 text-xs">
                     {testimonial.role}
                   </p>
                 </div>

@@ -7,9 +7,37 @@ export default {
   theme: {
     extend: {
       colors: {
+        gold: {
+          DEFAULT: '#C5A059',
+          hover: '#A88241',
+          light: '#E8CC8B',
+          lighter: '#F5E6BE',
+          lightest: '#FDF7E7',
+          bg: '#FFF8E7',
+        },
+        navy: {
+          DEFAULT: '#0D1B2A',
+          lighter1: '#1B2F4D',
+          lighter2: '#274C77',
+          lighter3: '#3D6AA5',
+          lightest: '#5A8CC7',
+          dark: '#0D1B2A', // Map dark to DEFAULT to preserve existing classes
+        },
+        neutral: {
+          bg: '#FAFAFA',
+          card: '#FFFFFF',
+          border: '#E8E8E8',
+          text: {
+            primary: '#0F172A',
+            secondary: '#64748B',
+          }
+        },
+        cream: '#FFFDF8',
+        
+        // Retaining old aliases briefly if any component misses an update, but we will migrate everything.
         primary: {
           gold: '#D4AF37',
-          navy: '#0D1B2A',
+          navy: '#0B1F3A',
         },
         accent: {
           gold: '#FFC107',
@@ -17,9 +45,9 @@ export default {
         secondary: {
           dark: '#1F2937',
         },
-        background: '#F5F6F8',
-        heading: '#0D1B2A',
-        paragraph: '#4B5563',
+        background: '#FAFAFA',
+        heading: '#0B1F3A',
+        paragraph: '#64748B',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -35,10 +63,10 @@ export default {
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
         'marquee-reverse': {
-          '0%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0%)' },
         },
         fadeIn: {
@@ -54,6 +82,8 @@ export default {
         'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
         'soft-lg': '0 10px 40px rgba(0, 0, 0, 0.12)',
         'glow': '0 0 20px rgba(212, 175, 55, 0.3)',
+        'card': '0 10px 30px rgba(0, 0, 0, 0.08)',
+        'card-hover': '0 15px 40px rgba(212, 175, 55, 0.25)',
       },
     },
   },

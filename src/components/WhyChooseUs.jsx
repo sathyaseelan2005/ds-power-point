@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 lg:py-32 bg-background">
+    <section id="why-choose-us" className="py-20 lg:py-32 bg-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Illustration */}
@@ -63,8 +63,8 @@ const WhyChooseUs = () => {
               </div>
             </div>
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary-gold/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent-gold/20 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gold/20 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gold/20 rounded-full blur-2xl" />
           </motion.div>
 
           {/* Right - Features Grid */}
@@ -76,13 +76,13 @@ const WhyChooseUs = () => {
               transition={{ duration: 0.6 }}
               className="mb-10"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-                <span className="text-primary-gold font-montserrat font-medium text-sm">Why Choose Us</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+                <span className="text-gold font-montserrat font-medium text-sm">Why Choose Us</span>
               </div>
-              <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+              <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
                 The DS Power Point Advantage
               </h2>
-              <p className="font-montserrat text-paragraph text-base">
+              <p className="font-montserrat text-white/80 text-base">
                 We go beyond just selling batteries. Our commitment to quality, service, and customer satisfaction sets us apart.
               </p>
             </motion.div>
@@ -96,15 +96,15 @@ const WhyChooseUs = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-soft-lg transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 shadow-soft border border-gold hover:shadow-soft-lg transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-primary-gold/10 rounded-xl flex items-center justify-center mb-4">
-                    <feature.icon size={24} className="text-primary-gold" />
+                  <div className="w-12 h-12 bg-gold rounded-xl flex items-center justify-center mb-4 shadow-soft">
+                    <feature.icon size={24} className="text-white" />
                   </div>
-                  <h3 className="font-poppins font-semibold text-lg text-heading mb-2">
+                  <h3 className="font-poppins font-semibold text-lg text-navy mb-2">
                     {feature.title}
                   </h3>
-                  <p className="font-montserrat text-paragraph text-sm leading-relaxed">
+                  <p className="font-montserrat text-navy/80 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </motion.div>

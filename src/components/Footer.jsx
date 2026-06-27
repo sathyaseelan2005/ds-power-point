@@ -34,7 +34,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary-navy text-white">
+    <footer className="bg-navy-dark text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
@@ -47,8 +47,8 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden">
-                <img src="/favicon.jpeg" alt="DS Logo" className="w-full h-full object-cover" />
+              <div className="h-14 sm:h-16 rounded-xl flex items-center justify-center overflow-hidden">
+                <img src="/logo.jpg" alt="DS Logo" className="h-full w-auto object-contain" />
               </div>
               <div>
                 <h3 className="font-poppins font-bold text-xl text-white">DS POWER POINT</h3>
@@ -67,9 +67,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-gold transition-colors"
+                className="w-10 h-10 border border-gold text-gold rounded-lg flex items-center justify-center hover:bg-gold hover:text-white transition-colors group"
               >
-                <InstagramIcon className="text-white" />
+                <InstagramIcon />
               </motion.a>
             </div>
           </motion.div>
@@ -88,7 +88,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className="font-montserrat text-gray-400 text-sm hover:text-primary-gold transition-colors"
+                    className="font-montserrat text-gray-400 text-sm hover:text-gold transition-colors"
                   >
                     {link.name}
                   </a>
@@ -126,28 +126,28 @@ const Footer = () => {
             <h4 className="font-poppins font-semibold text-lg text-white mb-6">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary-gold flex-shrink-0 mt-0.5" />
+                <MapPin size={20} className="text-gold flex-shrink-0 mt-0.5" />
                 <span className="font-montserrat text-gray-400 text-sm">
                   181, Mettur Road, Near Kalyan Silks, Erode – 11
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={20} className="text-primary-gold flex-shrink-0" />
+                <Phone size={20} className="text-gold flex-shrink-0" />
                 <div>
-                  <a href="tel:8902388887" className="font-montserrat text-gray-400 text-sm hover:text-primary-gold transition-colors block">
+                  <a href="tel:8902388887" className="font-montserrat text-gray-400 text-sm hover:text-gold transition-colors block">
                     89023 88887
                   </a>
-                  <a href="tel:9865788887" className="font-montserrat text-gray-400 text-sm hover:text-primary-gold transition-colors block">
+                  <a href="tel:9865788887" className="font-montserrat text-gray-400 text-sm hover:text-gold transition-colors block">
                     98657 88887
                   </a>
-                  <a href="tel:9842088887" className="font-montserrat text-gray-400 text-sm hover:text-primary-gold transition-colors block">
+                  <a href="tel:9842088887" className="font-montserrat text-gray-400 text-sm hover:text-gold transition-colors block">
                     98420 88887
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="text-primary-gold flex-shrink-0" />
-                <a href="mailto:dspowerpoint@gmail.com" className="font-montserrat text-gray-400 text-sm hover:text-primary-gold transition-colors">
+                <Mail size={20} className="text-gold flex-shrink-0" />
+                <a href="mailto:dspowerpoint@gmail.com" className="font-montserrat text-gray-400 text-sm hover:text-gold transition-colors">
                   dspowerpoint@gmail.com
                 </a>
               </li>
@@ -164,7 +164,7 @@ const Footer = () => {
               © {new Date().getFullYear()} DS Power Point. All rights reserved.
             </p>
             <p className="font-montserrat text-gray-500 text-xs mr-16 lg:mr-24 text-center md:text-right">
-              Designed & Developed by <a href="https://pepsoftwares.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">Pep Software</a>
+              Designed & Developed by <a href="https://pepsoftwares.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Pep Software</a>
             </p>
           </div>
         </div>

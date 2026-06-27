@@ -39,12 +39,12 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-primary-navy">
+    <section id="home" className="relative min-h-screen overflow-hidden bg-navy">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-gold/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-gold/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-accent-gold/10 rounded-full blur-2xl" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gold/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gold-light/10 rounded-full blur-2xl" />
       </div>
 
       {/* Curved Background */}
@@ -61,7 +61,7 @@ const Hero = () => {
           <defs>
             <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#FFC107" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#F4D06F" stopOpacity="0.1" />
             </linearGradient>
           </defs>
         </svg>
@@ -77,9 +77,9 @@ const Hero = () => {
             className="text-center lg:text-left"
           >
             {/* Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary-gold/30 mb-6">
-              <span className="w-2 h-2 bg-primary-gold rounded-full animate-pulse" />
-              <span className="text-primary-gold font-montserrat font-medium text-sm">Since 1998</span>
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-gold/30 mb-6">
+              <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+              <span className="text-gold font-montserrat font-medium text-sm">Since 1998</span>
             </motion.div>
 
             {/* Heading */}
@@ -92,7 +92,7 @@ const Hero = () => {
 
             <motion.h2
               variants={itemVariants}
-              className="font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl text-gradient-gold mb-6"
+              className="font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl text-gold mb-6"
             >
               Powering Your Life With Reliability
             </motion.h2>
@@ -115,7 +115,7 @@ const Hero = () => {
                 href="tel:8902388887"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-gold text-white rounded-full font-montserrat font-semibold text-base hover:shadow-glow transition-shadow"
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-gold text-white rounded-xl font-montserrat font-semibold text-base hover:bg-gold-hover shadow-card-hover transition-all"
               >
                 <Phone size={20} />
                 Call Now
@@ -140,7 +140,7 @@ const Hero = () => {
             >
               {trustItems.map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <CheckCircle size={18} className="text-primary-gold flex-shrink-0" />
+                  <CheckCircle size={18} className="text-gold flex-shrink-0" />
                   <span className="text-gray-300 font-montserrat text-sm">{item}</span>
                 </div>
               ))}
@@ -160,8 +160,8 @@ const Hero = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
               >
-                <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
-                  <Zap size={24} className="text-primary-gold" />
+                <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                  <Zap size={24} className="text-gold" />
                 </div>
                 <h3 className="font-poppins font-semibold text-white text-lg mb-2">UPS Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Home & Computer UPS solutions</p>
@@ -172,8 +172,8 @@ const Hero = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mt-8"
               >
-                <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
-                  <Car size={24} className="text-primary-gold" />
+                <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                  <Car size={24} className="text-gold" />
                 </div>
                 <h3 className="font-poppins font-semibold text-white text-lg mb-2">Car Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Four wheeler power solutions</p>
@@ -184,8 +184,8 @@ const Hero = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
               >
-                <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
-                  <Battery size={24} className="text-primary-gold" />
+                <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                  <Battery size={24} className="text-gold" />
                 </div>
                 <h3 className="font-poppins font-semibold text-white text-lg mb-2">Two Wheeler Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Bike & scooter batteries</p>
@@ -196,8 +196,8 @@ const Hero = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mt-8"
               >
-                <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
-                  <Truck size={24} className="text-primary-gold" />
+                <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                  <Truck size={24} className="text-gold" />
                 </div>
                 <h3 className="font-poppins font-semibold text-white text-lg mb-2">Industrial Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Heavy-duty power systems</p>
@@ -205,8 +205,8 @@ const Hero = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-primary-gold/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-accent-gold/20 rounded-full blur-xl" />
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gold/20 rounded-full blur-2xl" />
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gold-light/20 rounded-full blur-xl" />
           </motion.div>
         </div>
       </div>
@@ -215,7 +215,7 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" className="w-full h-auto">
           <path
-            fill="#F5F6F8"
+            fill="#1B2F4D"
             d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
           />
         </svg>

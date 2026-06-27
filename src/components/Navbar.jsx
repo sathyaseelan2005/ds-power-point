@@ -40,7 +40,7 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-soft'
+            ? 'bg-navy shadow-soft'
             : 'bg-transparent'
         }`}
       >
@@ -53,14 +53,14 @@ const Navbar = () => {
               className="flex items-center gap-3"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/favicon.jpeg" alt="DS Logo" className="w-full h-full object-cover" />
+              <div className="h-14 sm:h-16 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/logo.jpg" alt="DS Logo" className="h-full w-auto object-contain" />
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-poppins font-bold text-xl text-heading leading-tight">
+                <h1 className="font-poppins font-bold text-xl leading-tight text-white">
                   DS POWER POINT
                 </h1>
-                <p className="text-xs text-paragraph tracking-wider">PREMIUM BATTERIES</p>
+                <p className="text-xs text-neutral-text-secondary tracking-wider">PREMIUM BATTERIES</p>
               </div>
             </motion.a>
 
@@ -71,9 +71,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className={`font-montserrat font-medium text-sm transition-colors duration-200 hover:text-primary-gold ${
-                    isScrolled ? 'text-heading' : 'text-white'
-                  }`}
+                  className="font-montserrat font-medium text-sm transition-colors duration-200 hover:text-gold text-white"
                 >
                   {link.name}
                 </a>
@@ -86,7 +84,7 @@ const Navbar = () => {
                 href="tel:8902388887"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-5 py-2.5 bg-gradient-gold text-white rounded-full font-montserrat font-medium text-sm hover:shadow-glow transition-shadow"
+                className="flex items-center gap-2 px-5 py-2.5 bg-gold text-white rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover shadow-card-hover transition-all"
               >
                 <Phone size={16} />
                 Call Now
@@ -107,9 +105,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg ${
-                isScrolled ? 'text-heading' : 'text-white'
-              }`}
+              className="lg:hidden p-2 rounded-lg text-white"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -125,7 +121,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white lg:hidden"
+            className="fixed inset-0 z-40 bg-navy lg:hidden"
           >
             <div className="pt-24 px-6">
               <div className="flex flex-col gap-4">
@@ -137,7 +133,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-lg font-poppins font-medium text-heading py-3 border-b border-gray-100"
+                    className="text-lg font-poppins font-medium text-white hover:text-gold transition-colors py-3 border-b border-gold/20"
                   >
                     {link.name}
                   </motion.a>
@@ -146,7 +142,7 @@ const Navbar = () => {
               <div className="mt-8 flex flex-col gap-3">
                 <a
                   href="tel:8902388887"
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-gold text-white rounded-full font-montserrat font-medium"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gold hover:bg-gold-hover shadow-card-hover text-white rounded-xl font-montserrat font-medium transition-all"
                 >
                   <Phone size={18} />
                   Call Now

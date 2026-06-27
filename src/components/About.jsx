@@ -43,7 +43,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background">
+    <section id="about" className="py-20 lg:py-32 bg-navy-lighter1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Image */}
@@ -65,15 +65,15 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-soft-lg p-6"
+              className="absolute -bottom-6 -right-6 bg-navy-lighter2 border-t-2 border-t-gold rounded-2xl shadow-soft-lg p-6"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary-gold/10 rounded-xl flex items-center justify-center">
-                  <Shield size={24} className="text-primary-gold" />
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
+                  <Shield size={24} className="text-gold" />
                 </div>
                 <div>
-                  <p className="font-poppins font-bold text-heading text-lg">Authorized</p>
-                  <p className="text-paragraph text-sm font-montserrat">Dealer Status</p>
+                  <p className="font-poppins font-bold text-white text-lg">Authorized</p>
+                  <p className="text-white/80 text-sm font-montserrat">Dealer Status</p>
                 </div>
               </div>
             </motion.div>
@@ -86,21 +86,21 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-6">
-              <span className="text-primary-gold font-montserrat font-medium text-sm">About Us</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-6">
+              <span className="text-gold font-montserrat font-medium text-sm">About Us</span>
             </div>
 
-            <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-6">
+            <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-6">
               Trusted Battery Dealer Since 1998
             </h2>
 
-            <p className="font-montserrat text-paragraph text-base lg:text-lg leading-relaxed mb-6">
+            <p className="font-montserrat text-white/80 text-base lg:text-lg leading-relaxed mb-6">
               DS Power Point has been a leading name in battery and power solutions for over 25 years. 
               We pride ourselves on delivering genuine products from top brands, expert consultation, 
               and unmatched after-sales support to keep your life powered without interruption.
             </p>
 
-            <p className="font-montserrat text-paragraph text-base leading-relaxed mb-8">
+            <p className="font-montserrat text-white/80 text-base leading-relaxed mb-8">
               Located in the heart of Erode, we serve thousands of satisfied customers with 
               professional installation services and comprehensive warranty support.
             </p>
@@ -116,8 +116,8 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle size={20} className="text-primary-gold flex-shrink-0" />
-                  <span className="font-montserrat text-heading text-sm font-medium">{feature}</span>
+                  <CheckCircle size={20} className="text-gold flex-shrink-0" />
+                  <span className="font-montserrat text-white text-sm font-medium">{feature}</span>
                 </motion.div>
               ))}
             </div>
@@ -131,15 +131,15 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
-                  className="bg-white rounded-2xl p-5 shadow-soft text-center"
+                  className="bg-navy-lighter2 border-t-2 border-t-gold rounded-2xl p-5 shadow-soft text-center"
                 >
-                  <div className="w-10 h-10 bg-primary-gold/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <stat.icon size={20} className="text-primary-gold" />
+                  <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <stat.icon size={20} className="text-gold" />
                   </div>
-                  <p className="font-poppins font-bold text-2xl text-heading mb-1">
+                  <p className="font-poppins font-bold text-2xl text-gold mb-1">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </p>
-                  <p className="font-montserrat text-paragraph text-xs">{stat.label}</p>
+                  <p className="font-montserrat text-white/80 text-xs">{stat.label}</p>
                 </motion.div>
               ))}
             </div>

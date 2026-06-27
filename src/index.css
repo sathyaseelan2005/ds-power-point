@@ -11,31 +11,36 @@
   
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #F5F6F8;
-    color: #4B5563;
+    background-color: #0D1B2A;
+    color: #5A8CC7;
     overflow-x: hidden;
+  }
+  
+  ::selection {
+    background-color: #D4AF37;
+    color: #FFFFFF;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    color: #0D1B2A;
+    color: #C5A059;
   }
 }
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, #D4AF37 0%, #FFC107 100%);
+    background: linear-gradient(135deg, #C5A059 0%, #E8CC8B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .bg-gradient-gold {
-    background: linear-gradient(135deg, #D4AF37 0%, #FFC107 100%);
+    background: linear-gradient(135deg, #C5A059 0%, #E8CC8B 100%);
   }
   
   .bg-gradient-navy {
-    background: linear-gradient(135deg, #0D1B2A 0%, #1F2937 100%);
+    background: linear-gradient(135deg, #0B1F3A 0%, #07182C 100%);
   }
   
   .glass-effect {

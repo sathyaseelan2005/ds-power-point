@@ -55,7 +55,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-background">
+    <section id="contact" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -65,13 +65,13 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
-            <span className="text-primary-gold font-montserrat font-medium text-sm">Contact Us</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
+            <span className="text-gold font-montserrat font-medium text-sm">Contact Us</span>
           </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-heading mb-4">
+          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-navy mb-4">
             Get In Touch
           </h2>
-          <p className="font-montserrat text-paragraph text-base max-w-2xl mx-auto">
+          <p className="font-montserrat text-navy/80 text-base max-w-2xl mx-auto">
             Ready to power up? Contact us for expert advice and premium battery solutions
           </p>
         </motion.div>
@@ -92,12 +92,12 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 shadow-soft border border-gray-100 hover:shadow-soft-lg transition-all duration-300"
+                  className="bg-navy-lighter1 rounded-2xl p-6 shadow-soft border border-gold hover:shadow-soft-lg transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-primary-gold/10 rounded-xl flex items-center justify-center mb-4">
-                    <info.icon size={24} className="text-primary-gold" />
+                  <div className="w-12 h-12 bg-gold rounded-xl flex items-center justify-center mb-4 shadow-soft">
+                    <info.icon size={24} className="text-white" />
                   </div>
-                  <h3 className="font-poppins font-semibold text-heading text-base mb-2">
+                  <h3 className="font-poppins font-semibold text-white text-base mb-2">
                     {info.title}
                   </h3>
                   {info.link ? (
@@ -105,15 +105,15 @@ const Contact = () => {
                       href={info.link}
                       target={info.link.startsWith('http') ? '_blank' : undefined}
                       rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="font-montserrat text-paragraph text-sm hover:text-primary-gold transition-colors"
+                      className="font-montserrat text-white/80 text-sm hover:text-gold transition-colors"
                     >
                       {info.content}
                     </a>
                   ) : (
-                    <p className="font-montserrat text-paragraph text-sm">{info.content}</p>
+                    <p className="font-montserrat text-white/80 text-sm">{info.content}</p>
                   )}
                   {info.secondary && (
-                    <p className="font-montserrat text-paragraph text-sm mt-1">{info.secondary}</p>
+                    <p className="font-montserrat text-white/80 text-sm mt-1">{info.secondary}</p>
                   )}
                 </motion.div>
               ))}
@@ -142,17 +142,17 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="bg-white rounded-2xl shadow-soft-lg border border-gray-100 p-8 lg:p-10">
-              <h3 className="font-poppins font-bold text-2xl text-heading mb-2">
+            <div className="bg-navy-lighter1 rounded-2xl shadow-soft border border-gold p-8 lg:p-10">
+              <h3 className="font-poppins font-bold text-2xl text-white mb-2">
                 Send Us a Message
               </h3>
-              <p className="font-montserrat text-paragraph text-sm mb-8">
+              <p className="font-montserrat text-white/80 text-sm mb-8">
                 Fill out the form below and we'll get back to you shortly
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block font-montserrat text-heading text-sm font-medium mb-2">
+                  <label className="block font-montserrat text-white text-sm font-medium mb-2">
                     Your Name
                   </label>
                   <input
@@ -161,13 +161,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background rounded-xl border border-gray-200 font-montserrat text-heading text-sm focus:outline-none focus:border-primary-gold focus:ring-2 focus:ring-primary-gold/20 transition-all"
+                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-white/40"
                     placeholder="Enter your name"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-montserrat text-heading text-sm font-medium mb-2">
+                  <label className="block font-montserrat text-white text-sm font-medium mb-2">
                     Phone Number
                   </label>
                   <input
@@ -176,13 +176,13 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background rounded-xl border border-gray-200 font-montserrat text-heading text-sm focus:outline-none focus:border-primary-gold focus:ring-2 focus:ring-primary-gold/20 transition-all"
+                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-white/40"
                     placeholder="Enter your phone number"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-montserrat text-heading text-sm font-medium mb-2">
+                  <label className="block font-montserrat text-white text-sm font-medium mb-2">
                     Product Required
                   </label>
                   <select
@@ -190,7 +190,7 @@ const Contact = () => {
                     value={formData.product}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background rounded-xl border border-gray-200 font-montserrat text-heading text-sm focus:outline-none focus:border-primary-gold focus:ring-2 focus:ring-primary-gold/20 transition-all appearance-none"
+                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all appearance-none [&>option]:bg-navy [&>option]:text-white"
                   >
                     <option value="">Select a product</option>
                     <option value="Two Wheeler Battery">Two Wheeler Battery</option>
@@ -204,7 +204,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block font-montserrat text-heading text-sm font-medium mb-2">
+                  <label className="block font-montserrat text-white text-sm font-medium mb-2">
                     Message
                   </label>
                   <textarea
@@ -212,7 +212,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-background rounded-xl border border-gray-200 font-montserrat text-heading text-sm focus:outline-none focus:border-primary-gold focus:ring-2 focus:ring-primary-gold/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all resize-none placeholder:text-white/40"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
@@ -221,7 +221,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-gold text-white rounded-xl font-montserrat font-semibold text-base hover:shadow-glow transition-shadow"
+                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gold text-white rounded-xl font-montserrat font-semibold text-base hover:bg-gold-hover hover:shadow-card-hover transition-all"
                 >
                   <Send size={18} />
                   Send Message
