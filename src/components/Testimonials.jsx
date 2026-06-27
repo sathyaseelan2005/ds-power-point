@@ -22,18 +22,39 @@ const Testimonials = () => {
       rating: 5,
       text: 'As a workshop owner, I need reliable battery suppliers. DS Power Point never disappoints. Always genuine products with proper warranty.',
     },
+    {
+      name: 'Sakthi',
+      role: 'Customer',
+      rating: 5,
+      text: 'Amazing support and fast installation. I called them for a car battery replacement and they arrived within an hour. Excellent service!',
+    },
+    {
+      name: 'Prem',
+      role: 'Business Owner',
+      rating: 5,
+      text: 'The best battery shop in Erode. Their knowledgeable staff helped me choose the perfect inverter for my office. Truly a premium experience.',
+    },
+    {
+      name: 'Suriya',
+      role: 'Customer',
+      rating: 5,
+      text: 'Very satisfied with the purchase. They offer competitive prices and the after-sales support is unmatched. Would definitely recommend to friends.',
+    },
   ];
 
+  // Duplicate for seamless marquee
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-32 bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-gold/10 rounded-full mb-4">
             <span className="text-primary-gold font-montserrat font-medium text-sm">Testimonials</span>
@@ -45,18 +66,15 @@ const Testimonials = () => {
             Trusted by thousands of satisfied customers across Erode
           </p>
         </motion.div>
+      </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
+      {/* Scrolling Marquee container */}
+      <div className="relative w-full overflow-hidden flex group">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-8 px-4">
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-2xl shadow-soft border border-gray-100 p-8 hover:shadow-soft-lg transition-all duration-300 relative"
+              className="bg-white rounded-2xl shadow-soft border border-gray-100 p-8 w-[320px] lg:w-[400px] flex-shrink-0 relative transition-all duration-300 hover:shadow-soft-lg"
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 w-10 h-10 bg-primary-gold/10 rounded-full flex items-center justify-center">
@@ -91,7 +109,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

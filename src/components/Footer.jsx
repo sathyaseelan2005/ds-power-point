@@ -47,8 +47,8 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center">
-                <span className="text-white font-poppins font-bold text-xl">DS</span>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden">
+                <img src="/favicon.jpeg" alt="DS Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="font-poppins font-bold text-xl text-white">DS POWER POINT</h3>
@@ -163,8 +163,8 @@ const Footer = () => {
             <p className="font-montserrat text-gray-400 text-sm text-center md:text-left">
               © {new Date().getFullYear()} DS Power Point. All rights reserved.
             </p>
-            <p className="font-montserrat text-gray-500 text-xs">
-              Premium Battery & Power Solutions
+            <p className="font-montserrat text-gray-500 text-xs mr-16 lg:mr-24 text-center md:text-right">
+              Designed & Developed by <a href="https://pepsoftwares.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">Pep Software</a>
             </p>
           </div>
         </div>

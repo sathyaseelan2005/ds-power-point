@@ -53,8 +53,8 @@ const Navbar = () => {
               className="flex items-center gap-3"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="text-white font-poppins font-bold text-lg">DS</span>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/favicon.jpeg" alt="DS Logo" className="w-full h-full object-cover" />
               </div>
               <div className="hidden sm:block">
                 <h1 className="font-poppins font-bold text-xl text-heading leading-tight">
@@ -97,7 +97,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-5 py-2.5 bg-primary-navy text-white rounded-full font-montserrat font-medium text-sm hover:bg-secondary-dark transition-colors"
+                className="flex items-center gap-2 px-5 py-2.5 bg-green-500 text-white rounded-full font-montserrat font-medium text-sm hover:bg-green-600 transition-colors"
               >
                 <MessageCircle size={16} />
                 WhatsApp
@@ -155,7 +155,7 @@ const Navbar = () => {
                   href="https://wa.me/918902388887"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-primary-navy text-white rounded-full font-montserrat font-medium"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-green-500 hover:bg-green-600 transition-colors text-white rounded-full font-montserrat font-medium"
                 >
                   <MessageCircle size={18} />
                   WhatsApp

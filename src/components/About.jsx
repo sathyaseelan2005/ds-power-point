@@ -55,14 +55,8 @@ const About = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-soft-lg">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary-navy to-secondary-dark flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-gradient-gold rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                    <Award size={48} className="text-white" />
-                  </div>
-                  <h3 className="font-poppins font-bold text-3xl text-white mb-2">25+ Years</h3>
-                  <p className="text-gray-300 font-montserrat">Of Excellence</p>
-                </div>
+              <div className="aspect-[4/3] w-full h-full">
+                <img src="/unnamed.webp" alt="DS Power Point Store" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Floating Badge */}

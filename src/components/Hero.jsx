@@ -126,7 +126,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-montserrat font-semibold text-base border border-white/20 hover:bg-white/20 transition-colors"
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full font-montserrat font-semibold text-base hover:bg-green-600 transition-colors"
               >
                 <MessageCircle size={20} />
                 WhatsApp
@@ -187,7 +187,7 @@ const Hero = () => {
                 <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
                   <Battery size={24} className="text-primary-gold" />
                 </div>
-                <h3 className="font-poppins font-semibold text-white text-lg mb-2">Two Wheeler</h3>
+                <h3 className="font-poppins font-semibold text-white text-lg mb-2">Two Wheeler Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Bike & scooter batteries</p>
               </motion.div>
 
@@ -199,7 +199,7 @@ const Hero = () => {
                 <div className="w-12 h-12 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
                   <Truck size={24} className="text-primary-gold" />
                 </div>
-                <h3 className="font-poppins font-semibold text-white text-lg mb-2">Industrial</h3>
+                <h3 className="font-poppins font-semibold text-white text-lg mb-2">Industrial Batteries</h3>
                 <p className="text-gray-400 text-sm font-montserrat">Heavy-duty power systems</p>
               </motion.div>
             </div>
