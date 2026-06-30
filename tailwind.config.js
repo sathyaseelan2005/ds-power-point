@@ -8,12 +8,12 @@ export default {
     extend: {
       colors: {
         gold: {
-          DEFAULT: '#C5A059',
-          hover: '#A88241',
-          light: '#E8CC8B',
-          lighter: '#F5E6BE',
-          lightest: '#FDF7E7',
-          bg: '#FFF8E7',
+          DEFAULT: '#eaba0cff',
+          hover: '#e0b205',
+          light: '#fce373',
+          lighter: '#fdf1b8',
+          lightest: '#FCF5DF',
+          bg: '#FEFDF4',
         },
         navy: {
           DEFAULT: '#0D1B2A',
@@ -33,14 +33,14 @@ export default {
           }
         },
         cream: '#FFFDF8',
-        
+
         // Retaining old aliases briefly if any component misses an update, but we will migrate everything.
         primary: {
-          gold: '#D4AF37',
+          gold: '#EDC023',
           navy: '#0B1F3A',
         },
         accent: {
-          gold: '#FFC107',
+          gold: '#EDC023',
         },
         secondary: {
           dark: '#1F2937',
@@ -81,9 +81,9 @@ export default {
       boxShadow: {
         'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
         'soft-lg': '0 10px 40px rgba(0, 0, 0, 0.12)',
-        'glow': '0 0 20px rgba(212, 175, 55, 0.3)',
+        'glow': 'none',
         'card': '0 10px 30px rgba(0, 0, 0, 0.08)',
-        'card-hover': '0 15px 40px rgba(212, 175, 55, 0.25)',
+        'card-hover': '0 15px 40px rgba(0, 0, 0, 0.12)',
       },
     },
   },

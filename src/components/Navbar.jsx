@@ -84,7 +84,7 @@ const Navbar = () => {
                 href="tel:8902388887"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-5 py-2.5 bg-gold text-white rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover shadow-card-hover transition-all"
+                className="flex items-center gap-2 px-5 py-2.5 bg-gold text-navy rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover shadow-card-hover transition-all"
               >
                 <Phone size={16} />
                 Call Now
@@ -142,7 +142,7 @@ const Navbar = () => {
               <div className="mt-8 flex flex-col gap-3">
                 <a
                   href="tel:8902388887"
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gold hover:bg-gold-hover shadow-card-hover text-white rounded-xl font-montserrat font-medium transition-all"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gold hover:bg-gold-hover shadow-card-hover text-navy rounded-xl font-montserrat font-medium transition-all"
                 >
                   <Phone size={18} />
                   Call Now
@@ -166,3 +166,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

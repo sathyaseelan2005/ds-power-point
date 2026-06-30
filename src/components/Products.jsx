@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Battery, Car, Zap, Monitor, Truck, Home, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Battery, Zap, Car, Wrench, Shield, CheckCircle, MessageCircle, Home, Monitor, Truck } from 'lucide-react';
 
 const Products = () => {
   const products = [
@@ -78,9 +78,8 @@ const Products = () => {
   };
 
   return (
-    <section id="products" className="py-20 lg:py-32 bg-white">
+    <section id="products" className="py-6 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,13 +87,13 @@ const Products = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">Our Products</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-navy mb-4">
-            Premium Power Solutions
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            Our Products
           </h2>
-          <p className="font-montserrat text-navy/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Premium Power Solutions</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
             Strong starts. Steady backups. Total power solutions. Explore our wide range of batteries and power solutions from leading brands.
           </p>
         </motion.div>
@@ -178,7 +177,7 @@ const Products = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-24"
+          className="mt-4"
         >
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -203,7 +202,7 @@ const Products = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center gap-2 w-full py-2.5 bg-gold text-white rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover hover:shadow-card-hover transition-all"
+                    className="flex items-center justify-center gap-2 w-full py-2.5 bg-gold text-navy rounded-xl font-montserrat font-medium text-sm hover:bg-gold-hover hover:shadow-card-hover transition-all"
                   >
                     <MessageCircle size={16} />
                     Enquire Now

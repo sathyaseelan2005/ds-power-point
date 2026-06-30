@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, MessageCircle, Clock, Send } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Address',
-      content: '181, Mettur Road, Near Kalyan Silks, Erode – 11',
+      content: '181, Mettur Road, Near Kalyan Silks, Erode â€“ 11',
       link: 'https://maps.google.com/?q=181+Mettur+Road+Erode',
     },
     {
@@ -55,9 +55,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-white">
+    <section id="contact" className="py-6 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,13 +64,13 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">Contact Us</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-navy mb-4">
-            Get In Touch
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            Contact Us
           </h2>
-          <p className="font-montserrat text-navy/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Get In Touch</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
             Ready to power up? Contact us for expert advice and premium battery solutions
           </p>
         </motion.div>
@@ -161,7 +160,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-white/40"
+                    className="w-full px-4 py-3 bg-white rounded-xl border border-gold/30 font-montserrat text-navy text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-navy/40"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -176,7 +175,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-white/40"
+                    className="w-full px-4 py-3 bg-white rounded-xl border border-gold/30 font-montserrat text-navy text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all placeholder:text-navy/40"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -190,7 +189,7 @@ const Contact = () => {
                     value={formData.product}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all appearance-none [&>option]:bg-navy [&>option]:text-white"
+                    className="w-full px-4 py-3 bg-white rounded-xl border border-gold/30 font-montserrat text-navy text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all appearance-none [&>option]:bg-white [&>option]:text-navy"
                   >
                     <option value="">Select a product</option>
                     <option value="Two Wheeler Battery">Two Wheeler Battery</option>
@@ -212,7 +211,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-navy rounded-xl border border-gold/30 font-montserrat text-white text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all resize-none placeholder:text-white/40"
+                    className="w-full px-4 py-3 bg-white rounded-xl border border-gold/30 font-montserrat text-navy text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/50 focus:shadow-[0_0_10px_rgba(212,175,55,0.3)] transition-all resize-none placeholder:text-navy/40"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
@@ -221,7 +220,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gold text-white rounded-xl font-montserrat font-semibold text-base hover:bg-gold-hover hover:shadow-card-hover transition-all"
+                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gold text-navy rounded-xl font-montserrat font-semibold text-base hover:bg-gold-hover hover:shadow-card-hover transition-all"
                 >
                   <Send size={18} />
                   Send Message
@@ -236,3 +235,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+

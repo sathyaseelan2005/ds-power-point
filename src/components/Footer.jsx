@@ -128,7 +128,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-gold flex-shrink-0 mt-0.5" />
                 <span className="font-montserrat text-gray-400 text-sm">
-                  181, Mettur Road, Near Kalyan Silks, Erode – 11
+                  181, Mettur Road, Near Kalyan Silks, Erode â€“ 11
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -161,7 +161,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="font-montserrat text-gray-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} DS Power Point. All rights reserved.
+              &copy; {new Date().getFullYear()} DS Power Point. All rights reserved.
             </p>
             <p className="font-montserrat text-gray-500 text-xs mr-16 lg:mr-24 text-center md:text-right">
               Designed & Developed by <a href="https://pepsoftwares.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Pep Software</a>
@@ -174,3 +174,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

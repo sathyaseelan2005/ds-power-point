@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Settings, Home, Wrench, ArrowRight } from 'lucide-react';
+import { Settings, Wrench, Shield, Battery, Headphones, Activity, Home } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -11,7 +11,7 @@ const Services = () => {
       features: [
         'Oil Cooled Stabilizers',
         'Air Cooled Stabilizers',
-        'Capacity: 2KVA – 150KVA',
+        'Capacity: 2KVA Ã¢â‚¬â€œ 150KVA',
       ],
       iconBg: 'bg-gold shadow-soft',
       iconColor: 'text-white',
@@ -62,9 +62,8 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-navy">
+    <section id="services" className="py-6 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,13 +71,13 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">Our Services</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
-            Premium Services
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            Our Services
           </h2>
-          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Premium Services</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
             Beyond batteries, we offer comprehensive power protection and maintenance services
           </p>
         </motion.div>
@@ -96,20 +95,20 @@ const Services = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ y: -8 }}
-              className="group relative bg-white rounded-2xl border border-gold hover:border-t-4 hover:border-t-gold hover:shadow-card-hover transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-2xl border border-gold hover:bg-navy hover:shadow-card-hover hover:border-transparent transition-all duration-300 overflow-hidden cursor-pointer"
             >
               
               <div className="p-8">
                 {/* Icon */}
-                <div className={`w-14 h-14 ${service.iconBg} rounded-2xl flex items-center justify-center mb-6`}>
-                  <service.icon size={28} className={service.iconColor} />
+                <div className={`w-14 h-14 bg-gold/10 group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300`}>
+                  <service.icon size={28} className="text-gold group-hover:text-white transition-colors duration-300" />
                 </div>
 
                 {/* Content */}
-                <h3 className="font-poppins font-bold text-xl text-navy mb-3">
+                <h3 className="font-poppins font-bold text-xl text-navy group-hover:text-white transition-colors duration-300 mb-3">
                   {service.title}
                 </h3>
-                <p className="font-montserrat text-navy/80 text-sm leading-relaxed mb-6">
+                <p className="font-montserrat text-navy/80 group-hover:text-white/90 transition-colors duration-300 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -117,8 +116,8 @@ const Services = () => {
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      <div className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" />
-                      <span className="font-montserrat text-navy text-sm">{feature}</span>
+                      <div className="w-1.5 h-1.5 bg-gold group-hover:bg-white transition-colors duration-300 rounded-full flex-shrink-0" />
+                      <span className="font-montserrat text-navy group-hover:text-white transition-colors duration-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -134,3 +133,6 @@ const Services = () => {
 };
 
 export default Services;
+
+
+

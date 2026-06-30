@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { Plus, Minus, ChevronDown } from 'lucide-react';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -37,9 +37,8 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-navy">
+    <section className="py-6 lg:py-10 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,13 +46,13 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">FAQ</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
-            Frequently Asked Questions
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            FAQ
           </h2>
-          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Frequently Asked Questions</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
             Find answers to common questions about our products and services
           </p>
         </motion.div>
@@ -67,13 +66,13 @@ const FAQ = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden border border-gold"
+              className="group bg-slate-50 rounded-2xl overflow-hidden border border-gold hover:bg-navy hover:border-transparent transition-all duration-300"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50/50 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="font-poppins font-semibold text-navy text-base pr-4">
+                <span className="font-poppins font-semibold text-navy group-hover:text-white transition-colors duration-300 text-base pr-4">
                   {faq.question}
                 </span>
                 <motion.div
@@ -81,7 +80,7 @@ const FAQ = () => {
                   transition={{ duration: 0.3 }}
                   className="flex-shrink-0"
                 >
-                  <ChevronDown size={20} className="text-gold" />
+                  <ChevronDown size={20} className="text-gold group-hover:text-white transition-colors duration-300" />
                 </motion.div>
               </button>
 
@@ -95,7 +94,7 @@ const FAQ = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6">
-                      <p className="font-montserrat text-navy/80 text-sm leading-relaxed">
+                      <p className="font-montserrat text-navy/80 group-hover:text-white/90 transition-colors duration-300 text-sm leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -111,3 +110,6 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
+
+

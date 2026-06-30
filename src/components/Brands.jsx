@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const Brands = () => {
@@ -18,7 +17,7 @@ const Brands = () => {
   const marqueeBrands = [...brands, ...brands];
 
   return (
-    <section id="brands" className="py-20 lg:py-32 bg-navy overflow-hidden border-y border-gold/20">
+    <section id="brands" className="py-6 lg:py-10 bg-navy overflow-hidden border-y border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -28,19 +27,19 @@ const Brands = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">Our Partners</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
-            We Deal With
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-2 tracking-wider">
+            Brands
           </h2>
-          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">We Deal With</span>
+          </div>
+          <p className="font-montserrat text-white/90 text-lg max-w-2xl mx-auto">
             All leading brands available. We are proud to be authorized dealers and distributors for India's leading battery and power solution brands.
           </p>
         </motion.div>
 
         {/* Marquee Container */}
-        <div className="relative">
+        <div className="relative hidden lg:block">
           {/* Gradient Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-navy to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-navy to-transparent z-10" />
@@ -73,18 +72,13 @@ const Brands = () => {
                       className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  
+
                   {/* Brand Name */}
                   <h3 className="font-poppins font-semibold text-lg text-navy text-center mb-2">
                     {brand.name}
                   </h3>
-                  
-                  {/* Status Badge */}
-                  <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 bg-gold/10 text-gold rounded-full text-xs font-montserrat font-medium">
-                      {brand.status}
-                    </span>
-                  </div>
+
+
                 </motion.div>
               ))}
             </motion.div>
@@ -110,7 +104,7 @@ const Brands = () => {
                 />
               </div>
               <h4 className="font-poppins font-medium text-sm text-navy mb-1">{brand.name}</h4>
-              <span className="text-xs text-gold font-montserrat">{brand.status}</span>
+
             </motion.div>
           ))}
         </div>
@@ -120,3 +114,7 @@ const Brands = () => {
 };
 
 export default Brands;
+
+
+
+

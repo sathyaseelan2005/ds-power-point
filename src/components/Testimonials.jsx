@@ -46,7 +46,7 @@ const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 lg:py-32 bg-navy overflow-hidden">
+    <section className="py-6 lg:py-10 bg-navy overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         {/* Section Header */}
         <motion.div
@@ -56,12 +56,12 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">Testimonials</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-2 tracking-wider">
             What Our Customers Say
           </h2>
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Testimonials</span>
+          </div>
           <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
             Trusted by thousands of satisfied customers across Erode
           </p>
@@ -118,3 +118,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+

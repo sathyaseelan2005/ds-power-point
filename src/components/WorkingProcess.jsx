@@ -31,7 +31,7 @@ const WorkingProcess = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-navy">
+    <section className="py-6 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -41,20 +41,19 @@ const WorkingProcess = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-            <span className="text-gold font-montserrat font-medium text-sm">How It Works</span>
-          </div>
-          <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
-            Our Working Process
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            How It Works
           </h2>
-          <p className="font-montserrat text-white/80 text-base max-w-2xl mx-auto">
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">Our Working Process</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
             Simple and hassle-free process to get your power solutions
           </p>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-
 
           {/* Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -81,13 +80,13 @@ const WorkingProcess = () => {
                   </div>
                 )}
 
-                <div className="bg-white rounded-2xl p-6 shadow-soft border border-gold text-center h-full">
+                <div className="group bg-slate-50 rounded-2xl p-6 shadow-soft border border-gold text-center h-full hover:bg-navy hover:border-transparent hover:shadow-soft-lg transition-all duration-300 cursor-pointer">
                   {/* Number & Icon */}
                   <div className="relative inline-block mb-6">
-                    <div className="w-20 h-20 bg-gradient-gold rounded-2xl flex items-center justify-center mx-auto shadow-glow">
+                    <div className="w-20 h-20 bg-gold rounded-2xl flex items-center justify-center mx-auto shadow-glow">
                       <step.icon size={32} className="text-white" />
                     </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white border border-gold rounded-full shadow-soft flex items-center justify-center">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white border border-gold rounded-full shadow-soft flex items-center justify-center group-hover:border-navy transition-colors duration-300">
                       <span className="font-poppins font-bold text-sm text-gold">
                         {step.number}
                       </span>
@@ -95,10 +94,10 @@ const WorkingProcess = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-poppins font-bold text-xl text-navy mb-3">
+                  <h3 className="font-poppins font-bold text-xl text-navy group-hover:text-white transition-colors duration-300 mb-3">
                     {step.title}
                   </h3>
-                  <p className="font-montserrat text-navy/80 text-sm leading-relaxed max-w-xs mx-auto">
+                  <p className="font-montserrat text-navy/80 group-hover:text-white/90 transition-colors duration-300 text-sm leading-relaxed max-w-xs mx-auto">
                     {step.description}
                   </p>
                 </div>

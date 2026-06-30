@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Award, Users, BadgeCheck, Wallet } from 'lucide-react';
+import { Shield, Award, ThumbsUp, Clock, Settings, Wallet, Users, BadgeCheck } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const features = [
@@ -37,8 +37,26 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 lg:py-32 bg-navy">
+    <section id="why-choose-us" className="py-6 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl lg:text-5xl text-navy mb-2 tracking-wider">
+            Why Choose Us
+          </h2>
+          <div className="mb-6">
+            <span className="text-gold font-montserrat font-medium text-base md:text-lg uppercase tracking-wider">The DS Power Point Advantage</span>
+          </div>
+          <p className="font-montserrat text-gray-600 text-lg max-w-2xl mx-auto">
+            We go beyond just selling batteries. Our commitment to quality, service, and customer satisfaction sets us apart.
+          </p>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Illustration */}
           <motion.div
@@ -69,23 +87,6 @@ const WhyChooseUs = () => {
 
           {/* Right - Features Grid */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-10"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full mb-4">
-                <span className="text-gold font-montserrat font-medium text-sm">Why Choose Us</span>
-              </div>
-              <h2 className="font-poppins font-bold text-3xl lg:text-4xl text-white mb-4">
-                The DS Power Point Advantage
-              </h2>
-              <p className="font-montserrat text-white/80 text-base">
-                We go beyond just selling batteries. Our commitment to quality, service, and customer satisfaction sets us apart.
-              </p>
-            </motion.div>
 
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
@@ -96,15 +97,15 @@ const WhyChooseUs = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-white rounded-2xl p-6 shadow-soft border border-gold hover:shadow-soft-lg transition-all duration-300"
+                  className="group bg-slate-50 rounded-2xl p-6 shadow-soft border border-gold hover:bg-navy hover:border-transparent hover:shadow-soft-lg transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-12 h-12 bg-gold rounded-xl flex items-center justify-center mb-4 shadow-soft">
-                    <feature.icon size={24} className="text-white" />
+                  <div className="w-12 h-12 bg-gold/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-4 shadow-soft transition-colors duration-300">
+                    <feature.icon size={24} className="text-gold group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="font-poppins font-semibold text-lg text-navy mb-2">
+                  <h3 className="font-poppins font-semibold text-lg text-navy group-hover:text-white transition-colors duration-300 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="font-montserrat text-navy/80 text-sm leading-relaxed">
+                  <p className="font-montserrat text-navy/80 group-hover:text-white/90 transition-colors duration-300 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -118,3 +119,6 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+
+
+
